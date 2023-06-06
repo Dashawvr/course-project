@@ -1,0 +1,249 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.circuit-container {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    position: relative;
+}
+
+.circle-wrapper {
+    width: 200px;
+    height: 200px;
+    animation: rotate 4s linear infinite;
+}
+
+.circle-container {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Rest of the CSS styles for the terminals and connectors */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #fbf2c4, #74a892, #008585);
+    font-family: Arial, sans-serif;
+}
+
+.calculator-container {
+    max-width: 400px;
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.connection-type {
+    margin-bottom: 20px;
+}
+
+.connection-type-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.connection-type-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.connection-type-select:focus {
+    outline: none;
+    border-color: #008585;
+}
+
+.resistance-list {
+    margin-bottom: 20px;
+}
+
+.resistance-label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.resistance-input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.resistance-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.remove-button {
+    background-color: #c7522a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    /*margin-left: 10px;*/
+}
+
+.clear-button {
+    display: block;
+    width: 100%;
+    background-color: #c7522a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.remove-button:hover,
+.clear-button:hover {
+    background-color: #a23e20;
+}
+
+.add-button,
+.calculate-button {
+    display: block;
+    width: 100%;
+    background-color: #008585;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-button:hover,
+.calculate-button:hover {
+    background-color: #006b6b;
+}
+
+.result-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.result-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #008585;
+    text-align: center;
+}
+
+
+
+
+
+.circle-container {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+}
+
+.circle-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+}
+
+.circle-container .terminal {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+}
+
+.circle-container .terminal.left {
+    top: 50%;
+    left: -7px;
+}
+
+.circle-container .terminal.right {
+    top: 50%;
+    right: -7px;
+}
+
+.circle-container .connector {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    transform: translateX(-50%);
+}
+
+.circle-container .connector.left {
+    left: 50%;
+}
+
+.circle-container .connector.right {
+    right: 50%;
+}
+
+.circle-container .connector.top {
+    top: 0;
+}
+
+.circle-container .connector.bottom {
+    bottom: 0;
+}
